@@ -8,27 +8,26 @@ description: >-
   break the idea's own assumptions. Use this whenever the user wants RADICAL new
   features, to reshape / reinvent / rethink a project they already have, to
   cross-pollinate ideas from far-off fields, to "think outside the box", to
-  escape safe incremental thinking, to find a bold new angle, or to brainstorm
+  escape safe incremental thinking, to find a bold new angle, or to dream up
   unconventional directions for something already built — even if they don't say
   "remix". Trigger on phrasings like "how could I reinvent…", "wild ideas
   for…", "what would make X totally different", "I'm stuck, give me fresh angles
-  on…", "remix my app", "make this stand out". This is the DIVERGENT counterpart
-  to spec-style brainstorming: reach for remix to OPEN an idea up and
-  multiply possibilities; reach for ordinary brainstorming only to CONVERGE one
-  chosen idea into a spec.
+  on…", "remix my app", "make this stand out". remix is for OPENING an idea up
+  and multiplying possibilities — widening the field of options, not narrowing
+  toward a single chosen answer.
 ---
 
 # Remix — Creative Reshape Engine
 
 Take an idea that already exists (a repo, a doc, or a one-paragraph brief) and **explode** it: fan out blind parallel agents that each steal a mechanic from a distant domain and use it to break one of the idea's unspoken assumptions. Then **audit** the spread without crushing the bold ideas, and **converge** to a handful of fully-developed concepts.
 
-The engine fights the default failure mode of any AI brainstorm — quietly regressing to safe, on-scope, incremental suggestions. Every explorer is contractually forbidden from bolting features on; it must remove or replace something and name exactly what it stole.
+The engine fights the default failure mode of any AI ideation session — quietly regressing to safe, on-scope, incremental suggestions. Every explorer is contractually forbidden from bolting features on; it must remove or replace something and name exactly what it stole.
 
 ## When to use / when not
 
 **Use it** when the user has *something* already and wants to make it dramatically different or better: new angles, wild features, a reinvention, a way to stand out, an escape from a rut.
 
-**Don't use it** for ideating from a blank page (there's nothing to reshape yet — talk the idea out first) or for turning ONE chosen idea into a buildable spec (that's `superpowers:brainstorming`). Remix ends by *handing* a chosen concept to that flow.
+**Don't use it** for ideating from a blank page (there's nothing to reshape yet — talk the idea out first), or for narrowing ONE chosen idea down into a finished spec. remix produces strong divergent *directions* — carrying the winner forward is your next step.
 
 ## How it runs
 
@@ -88,13 +87,13 @@ First move:        <one concrete next step>
 
 Then print a tight summary in chat: the counts, and the finalist titles with their buckets.
 
-### 4. Offer the handoff (close the loop)
+### 4. Close the loop
 
-End by offering to converge:
+End by inviting the user to take a direction further:
 
-> "Pursue one of these? I'll hand it to `/brainstorming` to turn it into a real spec."
+> "Want to push one of these further? Tell me which finalist and I'll help you develop it — pressure-test it, sketch the first build, or map out next steps."
 
-If they pick one, invoke `superpowers:brainstorming` seeded with that concept card (its what-it-is, the rule it breaks, and the first move). Remix diverges; brainstorming converges — together they go idea → explosion → reshape → spec.
+Then work the chosen concept with the user directly. remix's job is to widen the field and hand back strong, well-argued directions — developing the winner from there is an ordinary conversation, no extra tooling required.
 
 ## The anti-convergence contract (why this works)
 

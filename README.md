@@ -2,7 +2,7 @@
 
 A divergent ideation engine for agents. Feed it an idea you **already have** — remix explodes it into dozens of wild cross-domain reshapes, audits them without crushing the bold ones, and converges to a few concepts worth building.
 
-It's the opposite of normal brainstorming: brainstorming *converges* one idea into a spec; remix *diverges* one idea into many.
+Most ideation tools push you to narrow toward one answer. remix does the reverse — it widens, multiplying a single idea into many divergent directions before you commit to any.
 
 ## Install
 
@@ -32,7 +32,7 @@ Five phases, fanned out across parallel agents:
 4. **Audit** — dedupe, score (novelty × fit × feasibility × moat), sort into portfolio buckets (🔒 safe · 🎲 big swing · 😴 sleeper). Bold ideas are deliberately protected from feasibility bias.
 5. **Converge** — finalists each get a skeptic (why it dies) and a champion (why it wins), then become full concept cards.
 
-The output is a `creative-board-<date>.md`: the full bucketed board plus concept cards — each with the rule it breaks, what it steals, a skeptic/champion verdict, and a first move. It then offers to hand a chosen concept to brainstorming to become a real spec.
+The output is a `creative-board-<date>.md`: the full bucketed board plus concept cards — each with the rule it breaks, what it steals, a skeptic/champion verdict, and a first move. Pick the finalist worth pursuing and take it forward from there.
 
 ## Requirements
 
