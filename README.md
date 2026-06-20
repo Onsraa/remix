@@ -38,6 +38,7 @@ The output is a `creative-board-<date>.md`: the full bucketed board plus concept
 
 - An agent harness with parallel-agent orchestration (built for Claude Code's `Workflow`). Without one, it falls back to a single-context run — narrower, but it still works.
 - A run fans out ~15–30 agents, and skills run with **full agent permissions**. Review before use.
+- Before it fans out, remix shows a ⚠️ cost warning and waits for your **go** — it never fires the agent swarm unprompted.
 
 ## Files
 

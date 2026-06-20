@@ -40,7 +40,22 @@ This skill orchestrates a background workflow (`remix.workflow.js`) that runs fi
 - **focus** *(default `anything`)* — narrow the reshaping if they want: `features`, `monetization`, `growth`, `UX`, `brand`, etc.
 - **budget** *(optional)* — if the user set a token target this run, pass it; it scales the explorer fleet.
 
-### 2. Read the palette, then launch
+### 2. Confirm before firing — required guardrail 🛑
+
+remix is expensive: one run fans out ~15-30 parallel agents and can spend roughly **400-600k tokens**. **Never launch the workflow without an explicit go from the user** — especially when this skill *auto-triggered* (the user asked to "reshape" or "remix" something but did not ask you to spend a fortune on agents).
+
+Show this warning and wait:
+
+> ⚠️ **remix is about to fan out ~15-30 parallel agents (≈400-600k tokens) to explode this idea.**
+> - **source:** `<repo / doc / brief>`
+> - **wildness:** `<grounded | bold | unhinged>`
+> - **focus:** `<focus>`
+>
+> Reply **`go`** to launch, or tell me what to change first.
+
+Proceed only on a clear yes ("go", "fire it", "yes"). If the user hesitates or goes quiet, run nothing. Where the harness supports it, ask this as a yes/no confirmation prompt rather than free text.
+
+### 3. Read the palette, then launch
 
 Read the sibling file `lenses.md` (its text must be passed in — the workflow script can't read files itself), then start the workflow:
 
@@ -66,7 +81,7 @@ If the workflow returns `{ error }`, tell the user plainly what failed — don't
 - `understand-failed` / `scout-failed` — retry, or switch to a pasted brief.
 - `cluster-failed` (carries `grounding` + `reshapes`) — usually a mid-run rate/session limit. Don't waste the work: finish **cluster → audit → converge inline** from the returned `reshapes` (dedupe, score on the anchored rubric, bucket, pick a 3-5 spread, add a skeptic/champion each), then write the board as normal.
 
-### 3. Write the board
+### 4. Write the board
 
 Stamp today's date yourself (the script can't) and write `creative-board-<YYYY-MM-DD>.md` in the working directory:
 
@@ -87,7 +102,7 @@ First move:        <one concrete next step>
 
 Then print a tight summary in chat: the counts, and the finalist titles with their buckets.
 
-### 4. Close the loop
+### 5. Close the loop
 
 End by inviting the user to take a direction further:
 
